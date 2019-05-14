@@ -1,0 +1,30 @@
+http://bit.ly/2ARHCD3
+
+1. Cambiar la columna que tiene el texto "summer" a "verano"
+
+declare
+total_registros INTEGER;
+abierto BOOLEAN;
+encontrado BOOLEAN;
+
+begin
+--Update season set 
+  total_registros:= sql%ROWCOUNT;
+  dbms_output.put_line('El numero de registros actualizados es: ' || total_registros);
+  
+  IF sql%ISOPEN THEN
+   dbms_output.put_line('Está abierto');
+  ELSE
+  dbms_output.put_line('NO Está abierto');
+ END IF;
+ 
+ IF sql%ISOPEN THEN
+   dbms_output.put_line('FOUND ES VERDADERO');
+  ELSE
+  dbms_output.put_line('FOUND ES FALSO');
+ END IF;
+end;
+
+2. Imprimir el nombre del producto, el precio y la estación de aquel
+--producto que tiene el ID 30 mediante un PL/SQL Anónimo y un cursor IMPLÍCITO
+
